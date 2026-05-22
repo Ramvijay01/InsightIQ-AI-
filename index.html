@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <metaD
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>AI Data Analyst</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+    <div class="main-container">
+
+
+        <div class="sidebar">
+
+            <h1>📊 AI Analyst</h1>
+
+            <p>
+                AI Powered Analytics Platform
+            </p>
+
+            <div class="sidebar-info">
+
+                <div class="info-box">
+                    🚀 Multi Dataset Analysis
+                </div>
+
+                <div class="info-box">
+                    📈 Interactive Charts
+                </div>
+
+                <div class="info-box">
+                    🤖 AI Business Intelligence
+                </div>
+
+                <div class="info-box">
+                    🌙 Dark / Light Mode
+                </div>
+
+            </div>
+
+            <button
+                class="theme-btn"
+                onclick="toggleTheme()"
+            >
+                🌙 Toggle Theme
+            </button>
+
+        </div>
+
+        
+
+        <div class="content">
+
+            #UPLOAD
+
+            <div class="card">
+
+                <h2>📂 Upload Dataset</h2>
+
+                <input
+                    type="file"
+                    id="fileInput"
+                >
+
+                <button onclick="uploadFile()">
+                    Upload CSV
+                </button>
+
+                <p id="uploadStatus"></p>
+
+            </div>
+
+            
+
+            <div class="card">
+
+                <h2>🗂 Select Dataset</h2>
+
+                <select id="datasetSelector"></select>
+
+            </div>
+
+            
+
+            <div class="card">
+
+                <h2>🧠 AI Business Insights</h2>
+
+                <div
+                    id="insightsBox"
+                    class="summary-box"
+                >
+
+                    Upload dataset to generate insights...
+
+                </div>
+
+            </div>
+
+            
+
+            <div class="card">
+
+                <h2>📊 KPI Dashboard</h2>
+
+                <div class="kpi-container">
+
+                    <div class="kpi-card">
+                        <h3>Total Rows</h3>
+                        <p id="rowsKPI">0</p>
+                    </div>
+
+                    <div class="kpi-card">
+                        <h3>Total Columns</h3>
+                        <p id="columnsKPI">0</p>
+                    </div>
+
+                    <div class="kpi-card">
+                        <h3>Missing Values</h3>
+                        <p id="missingKPI">0</p>
+                    </div>
+
+                </div>
+
+                <div class="kpi-container">
+
+                    <div class="kpi-card">
+                        <h3>Numeric Columns</h3>
+                        <p id="numericKPI">0</p>
+                    </div>
+
+                    <div class="kpi-card">
+                        <h3>Categorical Columns</h3>
+                        <p id="categoricalKPI">0</p>
+                    </div>
+
+                    <div class="kpi-card">
+                        <h3>Highest Value</h3>
+                        <p id="highestKPI">0</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <h2>📈 Interactive Analytics</h2>
+
+                <div class="filter-container">
+
+                    <div class="filter-box">
+
+                        <label>X-Axis</label>
+
+                        <select id="xAxis"></select>
+
+                    </div>
+
+                    <div class="filter-box">
+
+                        <label>Y-Axis</label>
+
+                        <select id="yAxis"></select>
+
+                    </div>
+
+                    <div class="filter-box">
+
+                        <label>Chart Type</label>
+
+                        <select id="chartType">
+
+                            <option value="bar">Bar</option>
+                            <option value="line">Line</option>
+                            <option value="pie">Pie</option>
+                            <option value="doughnut">Doughnut</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="filter-btn">
+
+                        <button
+                            onclick="updateDynamicChart()"
+                        >
+                            Analyze
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="chart-card">
+
+                    <canvas id="mainChart"></canvas>
+
+                </div>
+
+                <div class="chart-actions">
+
+                    <button onclick="downloadChart()">
+                        📥 Download Chart PNG
+                    </button>
+
+                </div>
+
+            </div>
+
+        
+
+            <div class="card">
+
+                <h2>🤖 AI Data Analyst</h2>
+
+                <div
+                    class="chat-box"
+                    id="chatBox"
+                >
+
+                    <div class="bot-message">
+
+                        👋 Upload dataset and ask intelligent questions.
+
+                    </div>
+
+                </div>
+
+                <div class="input-area">
+
+                    <input
+                        type="text"
+                        id="questionInput"
+                        placeholder="Ask AI about your data..."
+                    >
+
+                    <button onclick="askAI()">
+                        Send
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
